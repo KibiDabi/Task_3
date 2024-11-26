@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f3ede5;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%; /* Full width of parent */
+    max-width: 1440px; /* Constrain max size */
+    height: 400px; /* Default height for larger screens */
+    background: #f3ede5; /* Optional: Background for swiper */
+    overflow: hidden;
+    margin:  0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+.swiper-wrapper {
+    display: flex;
+  }
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  overflow: hidden;
+  text-align: center;
+  
+}
+
+.swiper-slide img {
+  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000; /* Match the arrow color to design */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border: none;
+  padding: 8px 16px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #ddd;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 5px; /* Adjust the size of the arrow icons */
+  color: inherit; /* Match the arrow color with the button's color */
+}
+
+/* Optional: Position the buttons correctly */
+.swiper-button-prev {
+    left: 5px; /* Space from the left edge */
+  }
+  
+  .swiper-button-next {
+    right: 5px; /* Space from the right edge */
+  }
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #toggle-swiper {
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+    background-color: #d5c0c0;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #toggle-swiper:hover {
+    background-color: #e0c9c9;
+  }
+
+/* For 375px screens (mobile) */
+@media (max-width: 375px) {
+  .swiper-container {
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    object-fit: contain;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* For 1440px screens (desktop) */
+@media (min-width: 1440px) {
+    .swiper-container {
+      max-width: 1440px;
+      height: 500px; /* Larger height */
+    }
+  
+    .swiper-slide img {
+      object-fit: cover; /* Ensure full coverage */
+    }
+  
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 30px; /* Larger buttons */
+      height: 30px;
+    }
+  }
+
